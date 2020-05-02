@@ -1,41 +1,37 @@
-# Coronavirus Spread 
-**Problem Code:** COVID19
+# Unit GCD
+**Problem Code:** UNITGCD
 
-**Problem Link:** https://www.codechef.com/MAY20B/problems/COVID19
+**Problem Link:** https://www.codechef.com/MAY20B/problems/UNITGCD
 ## Problem Description
-There are N people on a street (numbered 1 through N). For simplicity, we'll view them as points on a line. For each valid i, the position of the i-th person is Xi.
+Chef has a recipe book. He wishes to read it completely as soon as possible so that he could try to cook the dishes mentioned in the book.
 
-It turns out that exactly one of these people is infected with the virus COVID-19, but we do not know which one. The virus will spread from an infected person to a non-infected person whenever the distance between them is at most 2. If we wait long enough, a specific set of people (depending on the person that was infected initially) will become infected; let's call the size of this set the final number of infected people.
+The pages of the book are numbered 1 through N. Over a series of days, Chef wants to read each page. On each day, Chef can choose to read any set of pages such that there is no prime that divides the numbers of two or more of these pages, i.e. the numbers of pages he reads on the same day must be pairwise coprime. For example, Chef can read pages 1, 3 and 10 on one day, since (1,3), (3,10) and (1,10) are pairs of coprime integers; however, he cannot read pages 1, 3 and 6 on one day, as 3 and 6 are both divisible by 3. Since chef might get bored by reading the same recipe again and again, Chef will read every page exactly once.
 
-Your task is to find the smallest and largest value of the final number of infected people, i.e. this number in the best and in the worst possible scenario.
+Given N, determine the minimum number of days Chef needs to read the entire book and the pages Chef should read on each of these days.
 
 ## Input
 The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
-The first line of each test case contains a single integer N.
-The second line contains N space-seperated integers X1,X2,…,XN.
+The first and only line of each test case contains a single integer N.
 ## Output
-For each test case, print a single line containing two space-separated integers ― the minimum and maximum possible final number of infected people.
+For each test case:
+
+First, print a line containing a single integer D ― the minimum number of days required to read the book. Let's number these days 1 through D.
+Then, print D lines describing the pages Chef should read. For each valid i, the i-th of these lines should contain an integer Ci followed by a space and Ci space-separated integers ― the numbers of pages Chef should read on the i-th day.
+If there are multiple solutions with the minimum number of days, you may print any one.
 
 ## Constraints
-* 1≤T≤2,000
-* 2≤N≤8
-* 0≤Xi≤10 for each valid i
-* X1<X2<…<XN
+* 1≤T≤10
+* 1≤N≤10^6
 
 ## Example 
 ```
 Input:
-3
-2
-3 6
-3
-1 3 5
+1
 5
-1 2 5 6 7
 
 Output:
-1 1
-3 3
-2 3
+2
+3 1 2 5
+2 3 4
 ```
 
