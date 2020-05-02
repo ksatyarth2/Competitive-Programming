@@ -1,41 +1,42 @@
-# Coronavirus Spread 
-**Problem Code:** COVID19
+# COVID Pandemic and Long Queue
+**Problem Code:** COVIDLQ
 
-**Problem Link:** https://www.codechef.com/MAY20B/problems/COVID19
+**Problem Link:** https://www.codechef.com/APRIL20B/problems/COVIDLQ
 ## Problem Description
-There are N people on a street (numbered 1 through N). For simplicity, we'll view them as points on a line. For each valid i, the position of the i-th person is Xi.
+Due to the COVID pandemic, people have been advised to stay at least 6 feet away from any other person. Now, people are lining up in a queue at the local shop and it is your duty to check whether they are all following this advice.
 
-It turns out that exactly one of these people is infected with the virus COVID-19, but we do not know which one. The virus will spread from an infected person to a non-infected person whenever the distance between them is at most 2. If we wait long enough, a specific set of people (depending on the person that was infected initially) will become infected; let's call the size of this set the final number of infected people.
+There are a total of N spots (numbered 1 through N) where people can stand in front of the local shop. The distance between each pair of adjacent spots is 1 foot. Each spot may be either empty or occupied; you are given a sequence A1,A2,…,AN, where for each valid i, Ai=0 means that the i-th spot is empty, while Ai=1 means that there is a person standing at this spot. It is guaranteed that the queue is not completely empty.
 
-Your task is to find the smallest and largest value of the final number of infected people, i.e. this number in the best and in the worst possible scenario.
+For example, if N=11 and the sequence A is (0,1,0,0,0,0,0,1,0,0,1), then this is a queue in which people are not following the advice because there are two people at a distance of just 3 feet from each other.
+
+You need to determine whether the people outside the local shop are following the social distancing advice or not. As long as some two people are standing at a distance smaller than 6 feet from each other, it is bad and you should report it, since social distancing is not being followed.
 
 ## Input
 The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
 The first line of each test case contains a single integer N.
-The second line contains N space-seperated integers X1,X2,…,XN.
+The next line contains N space-separated integers A1,A2,…,AN.
 ## Output
-For each test case, print a single line containing two space-separated integers ― the minimum and maximum possible final number of infected people.
+For each test case, print a single line containing the string "YES" if social distancing is being followed or "NO" otherwise (without quotes).
 
 ## Constraints
-* 1≤T≤2,000
-* 2≤N≤8
-* 0≤Xi≤10 for each valid i
-* X1<X2<…<XN
+* 1≤T≤100
+* 1≤N≤100
+* 0≤Ai≤1 for each valid i
+* at least one spot is occupied
 
 ## Example 
 ```
 Input:
 3
-2
-3 6
 3
-1 3 5
-5
-1 2 5 6 7
+1 0 1
+7
+1 0 0 0 0 0 1
+11
+0 1 0 0 0 0 0 1 0 0 1
 
 Output:
-1 1
-3 3
-2 3
+NO
+YES
+NO
 ```
-
