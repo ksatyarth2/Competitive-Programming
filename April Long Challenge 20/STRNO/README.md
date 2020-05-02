@@ -1,41 +1,31 @@
-# Coronavirus Spread 
-**Problem Code:** COVID19
+# Strange Number 
+**Problem Code:** STRNO
 
-**Problem Link:** https://www.codechef.com/MAY20B/problems/COVID19
+**Problem Link:** https://www.codechef.com/APRIL20B/problems/STRNO
 ## Problem Description
-There are N people on a street (numbered 1 through N). For simplicity, we'll view them as points on a line. For each valid i, the position of the i-th person is Xi.
+When Varsha was travelling home, she saw a mysterious villa. Varsha is curious about this strange villa and wants to explore it. When she reached the entry gate, the guard gave her a problem to solve and said that he would allow her to enter the villa only if she solved it.
 
-It turns out that exactly one of these people is infected with the virus COVID-19, but we do not know which one. The virus will spread from an infected person to a non-infected person whenever the distance between them is at most 2. If we wait long enough, a specific set of people (depending on the person that was infected initially) will become infected; let's call the size of this set the final number of infected people.
+The guard gave Varsha two integers X and K. Varsha needs to determine whether there is an integer A such that it has exactly X positive integer divisors and exactly K of them are prime numbers.
 
-Your task is to find the smallest and largest value of the final number of infected people, i.e. this number in the best and in the worst possible scenario.
+Varsha found this problem really hard to solve. Can you help her?
 
 ## Input
 The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
-The first line of each test case contains a single integer N.
-The second line contains N space-seperated integers X1,X2,…,XN.
+The first and only line of each test case contains two space-separated integers X and K.
 ## Output
-For each test case, print a single line containing two space-separated integers ― the minimum and maximum possible final number of infected people.
+For each test case, print a single line containing one integer: 1 if a valid integer A exists or 0 if it does not exist.
 
 ## Constraints
-* 1≤T≤2,000
-* 2≤N≤8
-* 0≤Xi≤10 for each valid i
-* X1<X2<…<XN
+* 1≤T≤10^3
+* 1≤X,K≤10^9
 
 ## Example 
 ```
 Input:
-3
-2
-3 6
-3
-1 3 5
-5
-1 2 5 6 7
+1
+4 2
 
 Output:
-1 1
-3 3
-2 3
+1
 ```
 
