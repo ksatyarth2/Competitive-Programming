@@ -2,4 +2,4 @@
 **Problem Code:**
 PRICECON
 
-**Problem Link:**https://www.codechef.com/JUNE20B/problems/PRICECON
+**Problem Link:** https://www.codechef.com/JUNE20B/problems/PRICECON
